@@ -243,7 +243,6 @@ function App() {
         </div>
       </nav>
 
-      {/* VIP Hero Section - UPDATED (React, Node.js, MongoDB icons removed) */}
       <section id="home" className="hero-vip">
         <div className="hero-background">
           <div className="bg-gradient"></div>
@@ -323,7 +322,6 @@ function App() {
                         alt="Malik Muhammad Khalid - MERN Developer"
                         className="profile-picture"
                       />
-                      {/* React, Node.js, MongoDB icons removed from here */}
                     </div>
                     {/* Animation rings */}
                     <div className="avatar-ring"></div>
@@ -350,7 +348,6 @@ function App() {
               </div>
             </div>
             
-            {/* Floating tech icons removed from here */}
           </div>
         </div>
         
@@ -531,7 +528,6 @@ function App() {
         </div>
       </section>
 
-      {/* Projects Section - UPDATED FOR 11 PROJECTS */}
       <section id="projects" className="projects-vip">
         <div className="container">
           <div className="section-header">
