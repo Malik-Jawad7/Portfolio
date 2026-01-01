@@ -202,18 +202,23 @@ function App() {
 
   return (
     <div className="App">
-      {/* VIP Navigation */}
-      <nav className="nav-Vip">
+      {/* VIP Navigation - FIXED */}
+      <nav className="nav-vip">
         <div className="nav-container">
-          <div className="nan-brand">
-            <div className="">
-</div>
-             
+          <div className="nav-brand">
+            <div className="header-logo">
+              <div className="logo-image">MK</div>
             </div>
             <div className="brand-text">
-              <span className="brand-name">Malik Muhammad Khalid</span>
-              <span className="brand-title">MERN Stack Developer</span>
-            {/* </div> */}
+              <span className="brand-name">Portfolio</span>
+              <span className="brand-title">MERN Developer</span>
+            </div>
+          </div>
+          
+          {/* Developer Name on Right Side - Hidden on Mobile */}
+          <div className="developer-name">
+            <span className="name">Malik Muhammad Khalid</span>
+            <span className="title">MERN Stack Developer</span>
           </div>
           
           <div className="mobile-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -243,21 +248,12 @@ function App() {
         </div>
       </nav>
 
+      {/* Hero Section - FIXED */}
       <section id="home" className="hero-vip">
         <div className="hero-background">
           <div className="bg-gradient"></div>
           <div className="bg-particles"></div>
           <div className="bg-grid"></div>
-          <div className="floating-shapes">
-            {[...Array(15)].map((_, i) => (
-              <div key={i} className="floating-shape" style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${3 + Math.random() * 4}s`
-              }}></div>
-            ))}
-          </div>
         </div>
         
         <div className="hero-container">
@@ -282,16 +278,15 @@ function App() {
               </div>
             </div>
             
-           <p className="hero-description">
-  I enjoy building <span className="text-glow">modern digital experiences</span> using web technologies.
-  Passionate about learning and creating scalable, performant applications.
-</p>
+            <p className="hero-description">
+              I enjoy building <span className="text-glow">modern digital experiences</span> using web technologies.
+              Passionate about learning and creating scalable, performant applications.
+            </p>
 
             <div className="hero-actions">
               <button className="vip-primary-btn" onClick={handleDownloadCV}>
                 <FaDownload />
                 <span>Download CV</span>
-                <div className="btn-glow"></div>
               </button>
               <a href="#projects" className="vip-outline-btn">
                 <FaCode />
@@ -347,7 +342,6 @@ function App() {
                 </div>
               </div>
             </div>
-            
           </div>
         </div>
         
@@ -369,15 +363,14 @@ function App() {
           <div className="about-content">
             <div className="about-text">
               <h3>Passionate Developer & Problem Solver</h3>
-             <p>
-  I am a passionate <strong>MERN Stack Developer</strong> who enjoys building modern web applications.
-  My journey into development started with curiosity and continues as I learn and grow my skills.
-</p>
-<p>
-  As a <strong>quick learner</strong>, I am always eager to explore new technologies and frameworks.
-  I focus on writing clean, readable code and improving my development practices.
-</p>
-
+              <p>
+                I am a passionate <strong>MERN Stack Developer</strong> who enjoys building modern web applications.
+                My journey into development started with curiosity and continues as I learn and grow my skills.
+              </p>
+              <p>
+                As a <strong>quick learner</strong>, I am always eager to explore new technologies and frameworks.
+                I focus on writing clean, readable code and improving my development practices.
+              </p>
               
               <div className="features-grid">
                 <div className="feature-card">
@@ -471,7 +464,7 @@ function App() {
                 </div>
                 <div className="category-skills">
                   {skills.filter(skill => skill.category === 'frontend').map((skill, index) => (
-                    <div key={skill.name} className="skill-item" style={{ animationDelay: `${index * 0.1}s` }}>
+                    <div key={skill.name} className="skill-item">
                       <div className="skill-icon" style={{ color: skill.color }}>
                         {skill.icon}
                       </div>
@@ -502,7 +495,7 @@ function App() {
                 </div>
                 <div className="category-skills">
                   {skills.filter(skill => skill.category === 'backend').map((skill, index) => (
-                    <div key={skill.name} className="skill-item" style={{ animationDelay: `${index * 0.1}s` }}>
+                    <div key={skill.name} className="skill-item">
                       <div className="skill-icon" style={{ color: skill.color }}>
                         {skill.icon}
                       </div>
@@ -528,6 +521,7 @@ function App() {
         </div>
       </section>
 
+      {/* Projects Section */}
       <section id="projects" className="projects-vip">
         <div className="container">
           <div className="section-header">
